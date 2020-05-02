@@ -6,12 +6,23 @@ export class AddProduct extends Component {
       <div className="create-product">
         <label>
           Product Name:
-          <input type="text" placeholder="Product Name" />
+          <input
+            type="text"
+            placeholder="Product Name"
+            onChange={this.props.addProductName}
+          />
         </label>
+        <br/>
         <label>
-          Price: <input type="text" placeholder="Price" />
+          Price:
+          <input
+            type="text"
+            placeholder="Price"
+            onChange={this.props.addProductPrice}
+          />
         </label>
-        <button>Submit Product</button>
+        <br/>
+        <button onClick={this.props.handleClick}>Submit Product</button>
       </div>
     );
   }

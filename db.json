@@ -1,20 +1,25 @@
 {
-    "products": [
-        {
-            "name": "iPhone 11",
-            "price": 1000
-        },
-        {
-            "name": "Samsung",
-            "price": 800
-        },
-        {
-            "name": "iPhone SE",
-            "price": 400
-        },
-        {
-            "name": "Samsung S10",
-            "price": 700
-        }
-    ]
+  "products": [
+    {
+      "name": "iPhone 11",
+      "price": 1000
+    },
+    {
+      "name": "Samsung",
+      "price": 800
+    },
+    {
+      "name": "iPhone SE",
+      "price": 400
+    },
+    {
+      "name": "Samsung S10",
+      "price": 700
+    },
+    {
+      "id": "Lenovo",
+      "name": "Lenovo",
+      "price": "500"
+    }
+  ]
 }

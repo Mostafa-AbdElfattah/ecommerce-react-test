@@ -6,7 +6,7 @@ export class ProductsList extends Component {
     return (
       <div className="products">
         {this.props.products.map((product) => (
-          <Product handleClick={this.props.handleClick} product={product} />
+          <Product key={product.name} handleClick={this.props.handleClick} product={product} />
         ))}
       </div>
     );

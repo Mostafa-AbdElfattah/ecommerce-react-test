@@ -13,6 +13,8 @@ export class Home extends React.Component {
   state = {
     count: 0,
     products: [],
+    name: "",
+    price: "",
   };
 
   getProducts = () => {
@@ -21,6 +23,30 @@ export class Home extends React.Component {
       .then((backendResponse) =>
         this.setState({ products: backendResponse.data })
       );
+  };
+
+  postProducts = () => {
+    axios.post("http://localhost:4000/products", {
+      id: this.state.name,
+      name: this.state.name,
+      price: this.state.price,
+    });
+
+    // axios({
+    //   method: 'DELETE',
+    //   url: 'http://localhost:4000/products/7',
+
+    // });
+
+  };
+  
+
+  addProductName = (event) => {
+    this.setState({ name: event.target.value });
+  };
+
+  addProductPrice = (event) => {
+    this.setState({ price: event.target.value });
   };
 
   increaseCount = () => {
@@ -32,7 +58,11 @@ export class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <AddProduct />
+        <AddProduct
+          addProductName={this.addProductName}
+          addProductPrice={this.addProductPrice}
+          handleClick={this.postProducts}
+        />
         <ProductsList
           handleClick={this.increaseCount}
           products={this.state.products}
